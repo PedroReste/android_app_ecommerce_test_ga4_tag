@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="12dp" android:layout_marginVertical="6dp" app:cardBackgroundColor="@color/surface_dark" app:cardCornerRadius="14dp" app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp">
+
+        <!-- Ícone do produto -->
+        <ImageView android:id="@+id/ivCartItemImage" android:layout_width="56dp" android:layout_height="56dp" android:background="@drawable/bg_icon_container" android:contentDescription="Produto" android:padding="8dp" android:src="@drawable/ic_smartphone" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:tint="@color/orange_primary" />
+
+        <!-- Nome do produto -->
+        <TextView android:id="@+id/tvCartItemName" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:layout_marginEnd="8dp" android:ellipsize="end" android:maxLines="2" android:textColor="@color/white" android:textSize="13sp" android:textStyle="bold" app:layout_constraintEnd_toStartOf="@id/btnRemoveItem" app:layout_constraintStart_toEndOf="@id/ivCartItemImage" app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Variante -->
+        <TextView android:id="@+id/tvCartItemVariant" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:layout_marginTop="2dp" android:textColor="@color/text_secondary" android:textSize="11sp" app:layout_constraintEnd_toStartOf="@id/btnRemoveItem" app:layout_constraintStart_toEndOf="@id/ivCartItemImage" app:layout_constraintTop_toBottomOf="@id/tvCartItemName" />
+
+        <!-- Preço subtotal -->
+        <TextView android:id="@+id/tvCartItemPrice" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:layout_marginTop="6dp" android:textColor="@color/orange_primary" android:textSize="15sp" android:textStyle="bold" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@id/ivCartItemImage" app:layout_constraintTop_toBottomOf="@id/tvCartItemVariant" />
+
+        <!-- Botão remover -->
+        <ImageButton android:id="@+id/btnRemoveItem" android:layout_width="32dp" android:layout_height="32dp" android:background="@drawable/bg_icon_button" android:contentDescription="Remover" android:src="@drawable/ic_delete" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" app:tint="@color/red_wishlist" />
+
+        <!-- Controles de quantidade -->
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageButton android:id="@+id/btnDecreaseQty" android:layout_width="28dp" android:layout_height="28dp" android:background="@drawable/bg_qty_button" android:contentDescription="Diminuir" android:src="@drawable/ic_minus" app:tint="@color/orange_primary" />
+
+            <TextView android:id="@+id/tvCartItemQuantity" android:layout_width="32dp" android:layout_height="wrap_content" android:gravity="center" android:textColor="@color/white" android:textSize="15sp" android:textStyle="bold" />
+
+            <ImageButton android:id="@+id/btnIncreaseQty" android:layout_width="28dp" android:layout_height="28dp" android:background="@drawable/bg_qty_button" android:contentDescription="Aumentar" android:src="@drawable/ic_plus" app:tint="@color/orange_primary" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
