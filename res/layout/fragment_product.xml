@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/background_dark" android:fillViewport="true">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingBottom="32dp">
+
+        <!-- Imagem do produto -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="220dp" android:layout_marginHorizontal="16dp" android:layout_marginTop="16dp" app:cardBackgroundColor="@color/surface_dark" app:cardCornerRadius="16dp" app:cardElevation="0dp">
+
+            <ImageView android:id="@+id/ivProductImage" android:layout_width="match_parent" android:layout_height="match_parent" android:contentDescription="Imagem do produto" android:padding="24dp" android:src="@drawable/ic_smartphone" app:tint="@color/orange_primary" />
+
+            <!-- Badge de desconto -->
+            <TextView android:id="@+id/tvSaleBadge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="top|end" android:layout_margin="12dp" android:background="@drawable/bg_badge_red" android:paddingHorizontal="8dp" android:paddingVertical="4dp" android:textColor="@color/white" android:textSize="12sp" android:textStyle="bold" android:visibility="gone" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Brand + Category -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="16dp" android:layout_marginTop="16dp" android:gravity="center_vertical" android:orientation="horizontal">
+
+            <TextView android:id="@+id/tvBrand" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textColor="@color/orange_primary" android:textSize="13sp" android:textStyle="bold" />
+
+            <TextView android:id="@+id/tvCategory" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/bg_category_chip" android:paddingHorizontal="10dp" android:paddingVertical="4dp" android:textColor="@color/white" android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <!-- Nome -->
+        <TextView android:id="@+id/tvProductName" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="16dp" android:layout_marginTop="6dp" android:textColor="@color/white" android:textSize="22sp" android:textStyle="bold" />
+
+        <!-- Variante -->
+        <TextView android:id="@+id/tvVariant" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="16dp" android:layout_marginTop="4dp" android:textColor="@color/text_secondary" android:textSize="13sp" />
+
+        <!-- Rating -->
+        <TextView android:id="@+id/tvRating" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="16dp" android:layout_marginTop="10dp" android:textColor="@color/yellow_rating" android:textSize="13sp" />
+
+        <!-- Preços -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="16dp" android:layout_marginTop="12dp" android:gravity="center_vertical" android:orientation="horizontal">
+
+            <TextView android:id="@+id/tvPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/orange_primary" android:textSize="28sp" android:textStyle="bold" />
+
+            <TextView android:id="@+id/tvOriginalPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:textColor="@color/text_secondary" android:textSize="16sp" android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- Divisor -->
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginHorizontal="16dp" android:layout_marginTop="16dp" android:background="@color/divider_color" />
+
+        <!-- Descrição -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="16dp" android:layout_marginTop="16dp" android:text="Descrição" android:textColor="@color/white" android:textSize="16sp" android:textStyle="bold" />
+
+        <TextView android:id="@+id/tvDescription" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="16dp" android:layout_marginTop="8dp" android:lineSpacingExtra="4dp" android:textColor="@color/text_secondary" android:textSize="14sp" />
+
+        <!-- Quantidade -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="16dp" android:layout_marginTop="20dp" android:text="Quantidade" android:textColor="@color/white" android:textSize="16sp" android:textStyle="bold" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="16dp" android:layout_marginTop="10dp" android:gravity="center_vertical" android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnDecreaseQty" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_width="40dp" android:layout_height="40dp" android:minWidth="0dp" android:padding="0dp" android:text="−" android:textSize="20sp" app:cornerRadius="20dp" app:strokeColor="@color/orange_primary" />
+
+            <TextView android:id="@+id/tvQuantity" android:layout_width="48dp" android:layout_height="wrap_content" android:gravity="center" android:text="1" android:textColor="@color/white" android:textSize="20sp" android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnIncreaseQty" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_width="40dp" android:layout_height="40dp" android:minWidth="0dp" android:padding="0dp" android:text="+" android:textSize="20sp" app:cornerRadius="20dp" app:strokeColor="@color/orange_primary" />
+
+        </LinearLayout>
+
+        <!-- Botão Adicionar ao Carrinho -->
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnAddToCart" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginHorizontal="16dp" android:layout_marginTop="20dp" android:text="Adicionar ao Carrinho" android:textSize="16sp" android:textStyle="bold" app:backgroundTint="@color/orange_primary" app:cornerRadius="12dp" app:icon="@drawable/ic_cart" app:iconGravity="textStart" app:iconPadding="8dp" />
+
+        <!-- Botões secundários -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="16dp" android:layout_marginTop="12dp" android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnWishlist" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="48dp" android:layout_marginEnd="8dp" android:layout_weight="1" android:text="Favoritar" android:textSize="13sp" app:cornerRadius="10dp" app:icon="@drawable/ic_heart_outline" app:iconGravity="textStart" app:strokeColor="@color/red_wishlist" />
+
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnShare" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="48dp" android:layout_marginStart="8dp" android:layout_weight="1" android:text="Compartilhar" android:textSize="13sp" app:cornerRadius="10dp" app:icon="@drawable/ic_share" app:iconGravity="textStart" app:strokeColor="@color/blue_share" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
