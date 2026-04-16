@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="4dp" app:cardBackgroundColor="@color/surface_dark" app:cardCornerRadius="16dp" app:cardElevation="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="12dp">
+
+        <!-- Badge de desconto -->
+        <TextView android:id="@+id/tvSaleBadge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/bg_badge_red" android:paddingHorizontal="8dp" android:paddingVertical="3dp" android:textColor="@color/white" android:textSize="10sp" android:textStyle="bold" android:visibility="gone" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Imagem do produto -->
+        <ImageView android:id="@+id/ivProductImage" android:layout_width="0dp" android:layout_height="100dp" android:layout_marginTop="20dp" android:contentDescription="Imagem do produto" android:padding="12dp" android:src="@drawable/ic_smartphone" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:tint="@color/orange_primary" />
+
+        <!-- Nome -->
+        <TextView android:id="@+id/tvProductName" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:ellipsize="end" android:maxLines="2" android:textColor="@color/white" android:textSize="13sp" android:textStyle="bold" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ivProductImage" />
+
+        <!-- Marca -->
+        <TextView android:id="@+id/tvBrand" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="@color/text_secondary" android:textSize="11sp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tvProductName" />
+
+        <!-- Rating -->
+        <TextView android:id="@+id/tvRating" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:textColor="@color/yellow_rating" android:textSize="11sp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tvBrand" />
+
+        <!-- Preço -->
+        <TextView android:id="@+id/tvPrice" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:textColor="@color/orange_primary" android:textSize="15sp" android:textStyle="bold" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tvRating" />
+
+        <!-- Preço original -->
+        <TextView android:id="@+id/tvOriginalPrice" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="@color/text_secondary" android:textSize="11sp" android:visibility="gone" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tvPrice" />
+
+        <!-- Botão adicionar ao carrinho -->
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnAddToCart" android:layout_width="0dp" android:layout_height="36dp" android:layout_marginTop="10dp" android:text="Adicionar" android:textSize="12sp" android:textStyle="bold" app:backgroundTint="@color/orange_primary" app:cornerRadius="8dp" app:icon="@drawable/ic_cart_plus" app:iconGravity="textStart" app:iconPadding="4dp" app:iconSize="16dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/tvOriginalPrice" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
