@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TechStore</string>
+    <string name="title_home">🛍️ TechStore</string>
+    <string name="title_product">Detalhes do Produto</string>
+    <string name="title_cart">Carrinho</string>
+    <string name="title_success">Pedido Confirmado</string>
+
+    <!-- Home -->
+    <string name="search_hint">Buscar produtos...</string>
+    <string name="promo_title">🔥 SUPER SALE</string>
+    <string name="promo_subtitle">Até 30% OFF em Eletrônicos!</string>
+    <string name="promo_cta">Ver Ofertas</string>
+    <string name="section_featured">Produtos em Destaque</string>
+    <string name="empty_search">Nenhum produto encontrado 🔍</string>
+
+    <!-- Produto -->
+    <string name="btn_add_to_cart">Adicionar ao Carrinho</string>
+    <string name="btn_added">✅ Adicionado!</string>
+    <string name="btn_wishlist">Favoritar</string>
+    <string name="btn_wishlisted">Salvo</string>
+    <string name="btn_share">Compartilhar</string>
+    <string name="label_description">Descrição</string>
+    <string name="label_quantity">Quantidade</string>
+
+    <!-- Carrinho -->
+    <string name="cart_empty_title">Seu carrinho está vazio</string>
+    <string name="cart_empty_subtitle">Adicione produtos para continuar</string>
+    <string name="label_subtotal">Subtotal</string>
+    <string name="label_shipping">Frete</string>
+    <string name="label_tax">Impostos (5%%)</string>
+    <string name="label_total">Total</string>
+    <string name="label_coupon_hint">Cupom de desconto</string>
+    <string name="btn_checkout">Finalizar Compra</string>
+    <string name="shipping_free">Grátis ✅</string>
+
+    <!-- Sucesso -->
+    <string name="success_title">Compra Realizada! 🎉</string>
+    <string name="success_subtitle">Seu pedido foi confirmado com sucesso.\nAguarde a entrega! 🚀</string>
+    <string name="label_order_code">Código do Pedido</string>
+    <string name="btn_continue_shopping">Continuar Comprando</string>
+    <string name="btn_share_order">Compartilhar Pedido</string>
+    <string name="btn_refund">Solicitar Reembolso</string>
+
+    <!-- Dialogs -->
+    <string name="dialog_remove_title">Remover produto</string>
+    <string name="dialog_refund_title">Solicitar Reembolso</string>
+    <string name="dialog_refund_success_title">✅ Reembolso Solicitado</string>
+    <string name="dialog_refund_success_msg">Seu reembolso será processado em até 5 dias úteis.</string>
+    <string name="btn_cancel">Cancelar</string>
+    <string name="btn_confirm">Confirmar</string>
+    <string name="btn_remove">Remover</string>
+    <string name="btn_ok">OK</string>
+</resources>
