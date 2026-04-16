@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/background_dark">
+
+    <!-- Estado vazio -->
+    <LinearLayout android:id="@+id/layoutEmptyCart" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:orientation="vertical" android:padding="32dp" android:visibility="gone" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/ic_cart" app:tint="@color/text_secondary" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Seu carrinho está vazio" android:textColor="@color/text_secondary" android:textSize="18sp" android:textStyle="bold" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Adicione produtos para continuar" android:textColor="@color/text_secondary" android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <!-- Conteúdo do carrinho -->
+    <androidx.constraintlayout.widget.Group android:id="@+id/groupCartContent" android:layout_width="wrap_content" android:layout_height="wrap_content" app:constraint_referenced_ids="rvCartItems,cardSummary" />
+
+    <!-- Lista de itens -->
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvCartItems" android:layout_width="0dp" android:layout_height="0dp" android:paddingTop="8dp" app:layout_constraintBottom_toTopOf="@id/cardSummary" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Card de resumo + checkout -->
+    <androidx.cardview.widget.CardView android:id="@+id/cardSummary" android:layout_width="0dp" android:layout_height="wrap_content" app:cardBackgroundColor="@color/surface_dark" app:cardCornerRadius="20dp" app:cardElevation="16dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+
+            <!-- Subtotal -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Subtotal" android:textColor="@color/text_secondary" android:textSize="14sp" />
+                <TextView android:id="@+id/tvSubtotalValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/white" android:textSize="14sp" android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Frete -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Frete" android:textColor="@color/text_secondary" android:textSize="14sp" />
+                <TextView android:id="@+id/tvShippingValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/white" android:textSize="14sp" android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Impostos -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Impostos (5%)" android:textColor="@color/text_secondary" android:textSize="14sp" />
+                <TextView android:id="@+id/tvTaxValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/white" android:textSize="14sp" android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Divisor -->
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginVertical="12dp" android:background="@color/divider_color" />
+
+            <!-- Total -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Total" android:textColor="@color/white" android:textSize="18sp" android:textStyle="bold" />
+                <TextView android:id="@+id/tvTotalValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/orange_primary" android:textSize="20sp" android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Campo de cupom -->
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:hint="Cupom de desconto" app:boxBackgroundColor="@color/surface_input" app:boxCornerRadiusBottomEnd="10dp" app:boxCornerRadiusBottomStart="10dp" app:boxCornerRadiusTopEnd="10dp" app:boxCornerRadiusTopStart="10dp" app:boxStrokeColor="@color/orange_primary" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etCoupon" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textCapCharacters" android:textColor="@color/white" android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Botão Finalizar Compra -->
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnCheckout" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="12dp" android:text="Finalizar Compra" android:textSize="16sp" android:textStyle="bold" app:backgroundTint="@color/orange_primary" app:cornerRadius="12dp" app:icon="@drawable/ic_lock" app:iconGravity="textStart" app:iconPadding="8dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
